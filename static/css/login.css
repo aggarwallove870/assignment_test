@@ -1,0 +1,4216 @@
+
+  /* font kit end here */
+  a {
+    text-decoration: none;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #2a932a;
+  }
+  
+  .form-switch .form-check-input:focus{
+    box-shadow: none;
+  }
+  /* header css start */
+  header .navbar-nav li a {
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .login-header .navbar-nav li a{
+    color: #839393;
+  }
+  header .nav-item {
+    padding: 8px 12px;
+  }
+  
+  .header_btns button.btn {
+    border-radius: 6px;
+    border: 1px solid #228B22;
+    padding: 10px 19px;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background-color:#228B22 ;
+  }
+  .header_btns a{
+    color: currentColor;
+  }
+  
+  .header_btns button.active {
+    background: #228B22;
+    color: #fff;
+  }
+  
+  /* header css end */
+  
+  /* register_sec css start */
+  .register_sec {
+    padding: 170px 10px 80px;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  
+  .register_sec:after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/bg-left.png);
+    background-size: cover;
+    height: 540px;
+    bottom: 0px;
+    width: 290px;
+    background-repeat: no-repeat;
+    left: 0px;
+  }
+  .password_change_modal form{
+    border-radius: 5px;
+  }
+  .password_change_modal .register_sec{
+    padding: 0px;
+    min-height: unset;
+  }
+  .password_change_modal:after, .password_change_modal::before{
+    display: none;
+  }
+  .password_change_modal .modal-header{
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+  }
+  .password_change_modal form.register_form .form_inner{
+    border-radius: 5px;
+  }
+  .password_change_modal .modal-dialog{
+    max-width: 580px;
+  }
+  
+  .fa-eye-slash{
+    color:white !important;
+  }
+  
+  .register_sec::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/bg-right.png);
+    background-size: cover;
+    height: 540px;
+    top: 0px;
+    right: 0px;
+    width: 290px;
+    background-repeat: no-repeat;
+  }
+  
+  form.register_form .form_inner {
+    background: #214252;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 25px 100px;
+  }
+  
+  form.register_form .form_heading h2 {
+    color: #FFF;
+    font-family: Axiforma;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 7px;
+  }
+  
+  form.register_form .form_heading p {
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .blog-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important; /* Adjust spacing between blog entries */
+}
+
+
+
+  .register_form .input-field input {
+    border: none;
+    border-bottom: 1px solid #ffffff40;
+    ;
+    border-radius: 0px;
+    height: 45px;
+    min-height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 8px;
+    position: relative;
+    background-color: transparent;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .register_form .form-floating>label {
+    padding-left: 0px;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    z-index: 1;
+  }
+  
+  .loader {
+    background-color: #ffc107;
+    min-width: 100%;
+    min-height: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  .loader::after {
+    content: "";
+    min-height: 5px;
+    position: absolute;
+    background: #fff;
+    transform: translateX(-100%);
+    animation: animate 2s infinite;
+  }
+  .loader::before {
+    content: "";
+    min-height: 5px;
+    position: absolute;
+    background: #fff;
+    transform: translateX(-100%);
+    animation: animate 2s infinite;
+    animation-delay: 1s;
+  }
+  .fa-eye {
+    color: #fff;
+  }
+  i.fa-eye-slash {
+    color: #fff;
+  }
+  .notification p{
+    margin: 0 ;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 0;
+    top: 13px;
+  }
+  
+  .notification {
+    background-color: #ddffdd;
+    border-right: 6px solid #4CAF50;
+    width: 400px;
+    margin-bottom: 15px;
+    padding: 4px 12px;
+  
+  }
+  /* .notification{
+    right: 0px;
+    position: absolute;
+    left: 0px; 
+    display: none;
+    top: 390px;
+    width: 26%;
+  } */
+  .notification {
+    right: 0;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    width: 25%;
+    background-color: #bebebedb;
+    padding: 14px;
+    z-index: 99;
+  }
+  
+  .forgot_pass_form .form-floating>label {
+    text-transform: unset;
+  }
+  
+  .register_form .form-control:focus,
+  .register_form .form-floating>.form-control:focus~label::after,
+  .register_form .form-floating>.form-control:not(:placeholder-shown)~label::after {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .register_form .form-floating>.form-control:focus~label,
+  .form-floating>.form-control:not(:placeholder-shown)~label {
+    color: #fff;
+    opacity: 0.9;
+  }
+  
+  .input-field.form-floating>.form-control-plaintext~label,
+  .form-floating>.form-control:focus~label,
+  .form-floating>.form-control:not(:placeholder-shown)~label,
+  .form-floating>.form-select~label {
+    transform: scale(.85) translateY(-1rem) translateX(0.15rem);
+  }
+  
+  .eye_icon {
+    position: absolute;
+    right: 0px;
+    top: 12px;
+  }
+  
+  .create_acc_btn button,
+  .go_to_login a, .create_acc_btn  input {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 14px 18px;
+    color: #228B22;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .create_acc_btn  input:hover{
+    background-color: #fff;
+    color: #228B22;
+  }
+  
+  .go_to_login a {
+    text-transform: unset;
+  }
+  
+  .already_acc p {
+    color: #ffffffbf;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .already_acc p a {
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  
+  /* register_sec css end */
+  /* login css start */
+  .forgot_pass a {
+    color: #FF0000BF;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  /* login css end */
+  /* verification details css start */
+  .details_inner h5 {
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .register_form .input-field select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff40;
+    border-radius: 0px;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 0px;
+    --bs-form-select-bg-img: url(../images/select-icon.svg);
+  }
+  
+  .register_form .input-field select option {
+    color: #000;
+    padding-left: 8px;
+  }
+  
+  .register_form .input-field select:focus {
+    box-shadow: none;
+  }
+  
+  /* verification details css end */
+  /* select_categories css start */
+  
+  .form_inner .form-check label {
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    background: #228b221a;
+    color: #fff;
+    text-align: center;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  
+  .form_inner .form-check input:checked+label {
+    border: 1px solid #21D821;
+    background: #FFF;
+    color: #228B22;
+  }
+  
+  .form_inner .form-check {
+    padding-left: 0px;
+  }
+  
+  .select_categories {
+    border-bottom: 1px solid #ffffff26;
+  }
+  
+  .select_categories_inner {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  
+  form.select_categories_form .form_inner {
+    padding: 25px 80px;
+  }
+  
+  .create_acc_btn button.proceed_modal {
+    width: 100%;
+    max-width: 380px;
+  }
+  
+  .create_acc_btn button.proceed_modal:hover {
+    background-color: #fff;
+    color: #228B22;
+  }
+  
+  /* select_categories css end */
+  /* verification pending modal css start */
+  .verification_pending {
+    background-image: url(../images/pending-bg.png);
+    background-size: cover;
+    padding: 30px 30px;
+    border-radius: 8px;
+  }
+  
+  .verification_modal .modal-dialog {
+    max-width: 550px;
+    margin-top: 200px;
+  }
+  
+  .verification_modal .modal_close_btn button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: none;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .verification_content p {
+    color: #FF8C00;
+    text-align: center;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  
+  .go_to_login_btn a {
+    border-radius: 6px;
+    background: #2B942B;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    padding: 11px 28px;
+  }
+  
+  /* verification pending modal css end */
+  /* home header css start */
+  /* header.home_header .navbar-nav li a {
+    color: #ab1717;
+  } */
+  
+  header.home_header .navbar-nav li a.active {
+    font-weight: 400;
+    color: #fff;
+  }
+  header.login-header .navbar-nav li a.active {
+    font-weight: 400;
+    color: #839393;
+  }
+  .user_profile img{
+    height: 44px;
+    width: 44px;
+    border-radius: 100%;
+  }
+  
+  .user_profile .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .user_profile button:focus,
+  .user_profile .btn-check:checked+.btn,
+  .user_profile .btn.active,
+  .user_profile .btn.show,
+  .user_profile .btn:first-child:active,
+  .user_profile :not(.btn-check)+.btn:active {
+    outline: none;
+    border: none;
+  }
+  
+  .user_profile .dropdown-menu.show {
+    z-index: 9;
+  }
+  
+  .chat_icon.active {
+    background-color: #FFFFFF4D;
+    border-radius: 100%;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* home header css end */
+  
+  /* home sec start here */
+  .home_sec {
+    background-image: url(../images/home-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 180px 0px 170px;
+  }
+  
+  .scroll_down_arrow {
+    max-width: 220px;
+    text-align: center;
+  }
+  
+  .scroll_down_arrow .arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+  }
+  
+  .scroll_down_arrow path {
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
+  
+  @keyframes arrow {
+    0% {
+      opacity: 0
+    }
+  
+    40% {
+      opacity: 1
+    }
+  
+    80% {
+      opacity: 0
+    }
+  
+    100% {
+      opacity: 0
+    }
+  }
+  
+  @-webkit-keyframes arrow {
+    0% {
+      opacity: 0
+    }
+  
+    40% {
+      opacity: 1
+    }
+  
+    80% {
+      opacity: 0
+    }
+  
+    100% {
+      opacity: 0
+    }
+  }
+  
+  .scroll_down_arrow path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+  }
+  
+  .scroll_down_arrow path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s;
+  }
+  
+  .scroll_down_arrow path.a3 {
+    animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
+  }
+  
+  .scroll_down_arrow path.a4 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+  }
+  
+  .scroll_down_arrow path.a5 {
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+  }
+  
+  .home_content h1 {
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+  }
+  
+  .home_content h1 span img {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .home_content p {
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 125%;
+    margin-bottom: 30px;
+  }
+  
+  .home_content a {
+    border-radius: 6px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+    padding: 15px 25px;
+  }
+  
+  .home_sec_left img.home_image {
+    border-radius: 11px;
+  }
+  .request_sec .tab-content .star_box img{
+    width: 16px;
+    height: 16px;
+  }
+  .request_sec .tab-content .star_box {
+    gap: 1px!important;
+  }
+  
+  .home_chat_request_box {
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    max-width: 285px;
+    left: -120px;
+  }
+  
+  .chat_request_box {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 0px 13.07px 0px rgba(0, 0, 0, 0.07);
+    padding: 10px 10px;
+  }
+  
+  .other_chat_request_box {
+    top: -50px;
+    right: -30px;
+    bottom: unset;
+    left: unset;
+  }
+  
+  .chat_request_box img.chat_user_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  
+  .chat_user_name h3 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 12.199px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .chat_user_name p {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 10.456px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .chat_user_name span {
+    color: #FF8C00;
+    font-family: Axiforma;
+    font-size: 10.456px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+  }
+  .home_sec .chat_content2 p {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #00000012;
+  }
+  .home_sec .accept_btn img{
+  height: 14px;
+  width: 14px;
+  }
+  .chat_content p {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 12.199px;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  
+  .chat_acc_dec_btns button {
+    border-radius: 3.485px;
+    background: #E5E5E5;
+    padding: 10px 26px;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 12.199px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .chat_acc_dec_btns button.decline_btn:hover {
+    background: #E5E5E5;
+  }
+  
+  .chat_acc_dec_btns button.accept_btn {
+    background: #2A932A;
+    color: #fff;
+  }
+  
+  .chat_acc_dec_btns button.chat_btn {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    background-color: #98FF98;
+  }
+  
+  /* request sec css start */
+  .request_sec .tab-content {
+    padding: 100px 0px 20px;
+  }
+   .no_request_box{
+    background: #fff;
+    box-shadow: 0px 0px 13.07px 0px rgba(0, 0, 0, 0.07);
+        width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+  }
+  .notification_inner .no_request_box{
+    margin-top: 30px;
+  }
+  .no_request_box p{
+    margin-bottom: 0px;
+    font-family: Axiforma;
+    font-size: 35px;
+    font-weight: 500;
+  
+  }
+  .notification_inner .no_request_box p, .contracts_inner  .no_request_box p,
+  .transaction_list .no_request_box p{
+    font-size: 28px;
+  }
+  .contracts_inner .no_request_box{
+    margin-top: 140px;
+    box-shadow: none;
+  }
+  .transaction_list .no_request_box{
+    box-shadow: none;
+  }
+  .request_tabs .nav-tabs {
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 124.759px;
+    border: 2px solid #73BB20;
+    background: #FFF;
+    padding: 10px 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+  }
+  .request_tabs .chat_request_box{
+    padding: 16px 20px;
+  }
+  .request_tabs .chat_acc_dec_btns {
+    gap: 20px;
+  }
+  .request_tabs .nav-tabs button {
+    border: none;
+  }
+  
+  .request_tabs .nav-tabs button {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+    border-radius: 30px;
+    padding: 10px 35px;
+  }
+  
+  .request_tabs .nav-tabs button.active {
+    color: #fff;
+    background: #2A932A;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  
+  .request_sec .tab-content .chat_acc_dec_btns button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0px;
+  }
+  
+  .request_sec .chat_user_name h3 {
+    font-size: 18px;
+  }
+  
+  .request_sec .chat_user_name p,
+  .request_sec .chat_user_name span {
+    font-size: 14px;
+  }
+  
+  .request_sec .chat_content p {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 18px 0px 10px;
+  }
+  
+  .request_sec .chat_request_box img.chat_user_img {
+    width: 100%;
+    height: 60px;
+    max-width: 60px;
+  }
+  
+  .request_sec .scroll_down_arrow svg path {
+    fill: #2A932A;
+  }
+  
+  .request_sec .scroll_down_arrow {
+    padding-bottom: 60px;
+  }
+  
+  /* request sec css start */
+  /* get_in_touch css start */
+  
+  .get_in_touch {
+    background-color: #F4F4F4;
+    padding: 70px 0px;
+  }
+  
+  .get_in_touch::after {
+    content: '';
+    background-image: url(../images/bg-left.png);
+    height: 540px;
+    width: 290px;
+    position: absolute;
+    bottom: 0px;
+  }
+  
+  .get_in_touch::before {
+    content: '';
+    background-image: url(../images/bg-right.png);
+    height: 540px;
+    width: 290px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .get_in_touch_content h2 {
+    color: #333;
+    font-family: Axiforma;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.984px;
+  }
+  
+  .get_in_touch_content p {
+    color: rgba(51, 51, 51, 0.50);
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  
+  .get_in_touch_form label {
+    color: #949494;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  
+  .get_in_touch_form input,
+  .get_in_touch_form textarea {
+    border-radius: 6px;
+    border: 1px solid #2a932a26;
+    background: #fff;
+    padding: 10px 16px;
+    color: #33333380;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  .get_in_touch_form textarea {
+    height: 100px;
+  }
+  
+  .get_in_touch_form input::placeholder,
+  .get_in_touch_form textarea::placeholder {
+    color: #33333380;
+  }
+  
+  .send_btn button {
+    border-radius: 6px;
+    border: 1px solid #228B22;
+    background: #FFF;
+    padding: 11px 0px;
+    width: 100%;
+    max-width: 145px;
+    color: #228B22;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .send_btn button:hover {
+    color: #FFF;
+    background: #228B22;
+  }
+  .contact_us_sec{
+    padding: 180px 0px 60px;
+    background-color: #fff;
+  }
+  /* get_in_touch css end */
+  /* download_app css start */
+  .download_app {
+    background-image: url(../images/download-app-bg.png);
+    background-size: cover;
+    padding: 50px 0px;
+  }
+  
+  .contract_img {
+    bottom: -25%;
+    left: 30%;
+  }
+  
+  .agreement_img {
+    max-width: 220px;
+  }
+  
+  .contract_img img {
+    max-width: 195px;
+  }
+  
+  .download_app_content h2 {
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Axiforma;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 63.984px;
+    margin-bottom: 40px;
+  }
+  
+  /* download_app css end */
+  /* home sec end here */
+  /* home without login css start */
+  header.login-header .login_header.header_btns button.btn.login_btn {
+    border: 1px solid #228B22;
+    color: #fff;
+    background-color: transparent;
+  }
+  header.home_header .header_btns button.btn.login_btn {
+    border: 1px solid #228B22;
+    color: #228B22;
+    background-color: transparent;
+  }
+  .home_without_login_header .nav-link.active{
+    color: #fff;
+  }
+  .home_without_login_header .header_btns button{
+    border: 1px solid #fff;
+  }
+  .notification_icon .notification_badge{
+    position: absolute;
+    height: 16px;
+      width: 16px;
+      background: #d10505;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      top: -5px;
+      right: -5px;
+      font-size: 13px;
+  }
+  
+  /* home without login css end */
+  /* chat sec css start */
+  .chat_sec {
+    padding: 100px 0px 50px;
+  }
+  
+  .bg-green::before {
+    background-image: url(../images/header-bg.png);
+    content: '';
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #sidebar {
+    position: relative;
+    z-index: 3;
+    margin-top: 30px;
+  }
+  
+  .left_sidebar_content {
+    height: 100%;
+    border-radius: 12px 0px 0px 0px;
+    border: 1px solid #E3E8E7;
+    background: #FFF;
+    background-color: #fff;
+  }
+  
+  .chat_process .all_messages {
+    padding: 20px 24px 0px;
+  }
+  
+  .chat_process .all_messages p {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+  
+  .chat_process .serach_input_box {
+    padding: 22px 16px 8px;
+    position: relative;
+  }
+  
+  .chat_process .serach_input_box input {
+    width: 100%;
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 40px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    border: 1px solid #E3E8E7;
+  }
+  
+  
+  .chat_process .serach_input_box input[type="text"]::placeholder {
+    color: #A9A9A9;
+  }
+  
+  .chat_process .serach_icon {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+  }
+  
+  .chat_process .sidebar_info {
+    padding: 16px 0px;
+    gap: 16px;
+    transition: all 0.3s ease-in;
+    align-items: center;
+    border-bottom: 1px solid #E3E8E7;
+    margin: 0px 24px;
+    justify-content: space-between;
+  }
+  
+  /* .chat_process .sidebar_info.active_chat {
+    background: #F0FFF0;
+    position: relative;
+    margin: 0px;
+    padding: 16px 24px;
+  }
+  
+  .chat_process .sidebar_info.active_chat::before {
+    content: '';
+    position: absolute;
+    background: #228B22;
+    height: 100%;
+    width: 6px;
+    left: 0px;
+  } */
+  button.click-button.active_chat::before {
+    content: '';
+    position: absolute;
+    background: #228B22;
+    height: 100%;
+    width: 6px;
+    left: 0px;
+    top: 0;
+  }
+  button.click-button.active_chat {
+    background: #F0FFF0 !important;
+    position: relative;
+    margin: 0px;
+    
+  }
+  button.click-button{
+    position: relative;
+    width: 100%;
+  }
+  .chat_process .left_sidebar_links a:last-child .sidebar_info {
+    border-bottom: none;
+  }
+  
+  
+  .chat_process .sidebar_info h5 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  
+  .chat_process .sidebar_info p {
+    overflow: hidden;
+    color: #A9A9A9;
+    width: 205px;
+    font-family: 'Axiforma';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  .download_btn {
+    position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+  }
+  .receiver_img{
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  .receiver_img {
+    margin-bottom: 0px;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 20px 20px 20px 0px;
+    background: #F3F3F3;
+    padding: 20px;
+  }
+  .receiver_img:hover .download_btn{
+  display: block;
+  }
+  .download_btn button{
+    background: #ffffff40;
+    border-radius: 100%;
+    border: none;
+    width: 50px;
+    height: 50px;
+  }
+  .download_btn button svg path{
+    fill: #fff;
+  }
+  .right_sidebar_info .chat_user_img img, .chat_sender_content img{
+    border-radius: 20px!important;
+  }
+  .chat_process .msg_time {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .chat_process .msg_time span {
+    color: #A9A9A9;
+    font-family: 'Axiforma';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .chat_process .msg_time .msg_count {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #FF8C00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chat_process .msg_time .msg_count span {
+    color: #FFF;
+    font-family: 'Axiforma';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  
+  .right_sidebar_info .right_sidebar_header {
+    justify-content: space-between;
+    border: 1px solid #E3E8E7;
+    border-left: none;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-top-right-radius: 12px;
+  }
+  
+  .call_icons a {
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    border: 0.692px solid #E3E8E7;
+  }
+  
+  .create_agreement button.btn {
+    background-color: transparent;
+    border: none;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: capitalize;
+  }
+  button#create-agreement-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #FF8C00;
+    text-transform: capitalize;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  #create-agreement-btn span img {
+    width: 24px;
+  }
+  #create-agreement-btn span{
+    background: #FF8C00;
+    height: 35px;
+    position: relative;
+    width: 35px;
+    border-radius: 50%;
+  }
+  .create_agreement li {
+    margin: 0px 15px;
+    padding: 15px 0px;
+    border-bottom: 1px solid #00000012;
+  }
+  
+  .create_agreement .dropdown-item {
+    padding: 0px;
+    color: #2F4F4F;
+    text-align: center;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.576px;
+    letter-spacing: 0.073px;
+  }
+  
+  .create_agreement li:last-child {
+    border-bottom: none;
+  }
+  
+  .create_agreement .dropdown-toggle.show::after {
+    transform: rotate(180deg);
+  }
+  
+  .create_agreement .dropdown-menu {
+    border-radius: 6px;
+    border: 1px solid #00000026;
+    background: #fff;
+    box-shadow: 0px 0px 4px 0px #00000026;
+  }
+  
+  .create_agreement .dropdown-item:hover,
+  .create_agreement .dropdown-item:active {
+    background-color: transparent;
+  }
+  
+  .create_agreement button.btn:first-child:active,
+  .create_agreement button:hover {
+    background-color: transparent;
+    color: #2F4F4F;
+  }
+  
+  .right_sidebar_info .user_details {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+  }
+  .right_sidebar_info button.driver_modal_btn{
+    background-color: transparent;
+    border: none;
+  }
+  
+  img.user_header_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+  }
+  
+  .user_info_image img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+  }
+  
+  .active_chat_user_name h5 {
+    margin-bottom: 0px;
+    color: #2F4F4F;
+    font-family: 'Axiforma';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .active_chat_user_name p {
+    color: #A9A9A9;
+    font-family: 'Axiforma';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative;
+  }
+  
+  .active_chat_user_name span {
+    border-radius: 20px;
+    background: #00B207;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  
+  .chat_process_info {
+    padding: 20px 5px 20px 20px;
+    border: 1px solid #E3E8E7;
+    border-left: none;
+    border-top: none;
+    position: relative;
+  }
+  .chat_process_info span#show-loader {
+    color: #000;
+    margin: auto;
+  }
+  .loader_div{
+    display: flex;
+      flex-direction: column-reverse;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+  }
+  
+  .hidden {
+      display: none;
+  }
+  
+  
+  .chat_user_img img{
+    height: 36px !important;
+    width: 36px !important;
+  }
+  .right_sidebar_info .chat_reciever,
+  .chat_sender {
+    max-width: 370px;
+    width: 100%;
+    /* display: grid; */
+    /* align-items: center; */
+    gap: 0;
+    margin-bottom: 40px;
+    position:relative;
+  }
+  .right_sidebar_info .chat_reciever{
+  display: flex;
+  gap: 10px;
+  
+  }
+  
+  .right_sidebar_info .chat_user_img {
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    margin-bottom: 20px;
+  }
+  .right_sidebar_info .chat_reciever .chat_user_img {
+    margin-bottom: 0px;
+  }
+  .chat_icon 
+   button#uploadBtn {
+      background: transparent;
+      border: transparent;
+      display: flex;
+  }
+  .receiver_img img {
+    height: 137px !important;
+    width: 247px !important;
+    max-width: 151px !important;
+    border-radius: 0px !important;
+  }
+  .right_sidebar_info .chat_reciever img,
+  .chat_sender .chat_user_img img {
+    width: 319px;
+    max-width: 319px !important;
+    height: 170px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+    
+  
+  .right_sidebar_info .chat_reciever p {
+    margin-bottom: 0px;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 20px 20px 20px 0px;
+    background: #F3F3F3;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+  }
+  .outer_img_name .pdf-info img {
+    border-radius: 0px !important;
+  }
+  .outer_img_name {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+  }
+  .chat_time span {
+    color: #A9A9A9;
+    font-family: 'Axiforma';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .right_sidebar_info .chat_sender {
+    max-width: 370px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 5px;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 20px;
+    /* display: flex; */
+    gap: 10px;
+  }
+  .chat_sender_content {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+  }
+  .chat_sec .chat_sender_content{
+    justify-content: end;
+  }
+  .chat_sec.chat_process .sidebar_info{
+    justify-content: unset;
+  }
+  /* .chat_sender .chat_user_img {
+    margin-bottom: 60px;
+  } */
+  
+  .right_sidebar_info .chat_sender p {
+    margin-bottom: 0px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Axiforma;
+    font-weight: 400;
+    border-radius: 20px 20px 0px 20px;
+    background: #1D951B;
+    padding: 20px;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .right_sidebar_info .chat_sender.contract_chat .chat_sender_content{
+    margin-bottom: 0px;
+    color: #fff;
+    font-size: 14px;
+    font-family: Axiforma;
+    font-weight: 400;
+    border-radius: 20px 20px 0px 20px;
+    background: #1D951B;
+    padding: 20px;
+    min-width: auto;
+    display: block;
+    align-items: center;
+    gap: 10px;
+  }
+  .right_sidebar_info .chat_sender.contract_chat .chat_sender_content p{
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0px;
+  }
+  .right_sidebar_info .chat_sender.contract_chat{
+    display: flex;
+  }
+  .chat_sender_content a{
+    color: #fff;
+    text-decoration: underline;
+      text-underline-offset: 4px;
+  }
+  .chat_sender_content a:hover{
+    text-decoration: none;
+  }
+  .right_sidebar_info .chat_sender p a {
+    color: #fff;
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+  }
+  #stopButton  i {
+    color: red;
+    font-size: 12px;
+  }
+  button#recordButton {
+    border: transparent !important;
+    background: transparent;
+    color: #818181;
+    padding: 0;
+    display: grid;
+  }
+  button#stopButton {
+    border: transparent !important;
+    background: transparent;
+    display: grid;
+  } 
+  .audio-record{
+    display: flex;
+    align-items: baseline;
+  }
+  .chat_forward_icon {
+    margin-left: 10px;
+  }
+  #recordButton span svg {
+    width: 20px;
+  }
+  .right_sidebar_info .chat_sender p a:hover{
+    text-decoration: underline;
+  }
+  /* .chat_sender_content{
+    margin-bottom: 20px;
+  } */
+  /* .chat_time.text-end {
+    margin-top: 10px;
+  } */
+  .right_sidebar_info .chat_sender p span.car_insuarance {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .right_sidebar_info .chat_sender p button.view_agree_link {
+    text-decoration: underline;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .right_sidebar_info .chat_sender p button.view_agree_link:hover{
+    color: #bdffa2;
+  }
+  .right_sidebar_info .chat_footer {
+    margin-bottom: 5px;
+    border-radius: 20px;
+    border: 1px solid #E3E8E7;
+    background: #FFF;
+    margin-right: 15px;
+  }
+  
+  .right_sidebar_info .chat_footer textarea {
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 20px;
+    border: none;
+    width: 100%;
+    resize: none;
+    color: #2F4F4F;
+    font-family: 'Axiforma';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  
+  .input_chats_icon {
+    border-top: 1px solid #E3E8E7;
+    padding: 12px 20px;
+  }
+  
+  .chat_inner {
+    height: 480px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  
+  .left_sidebar_links {
+    height: 600px;
+    overflow-y: auto;
+  }
+  
+  .chat_inner::-webkit-scrollbar,
+  .left_sidebar_links::-webkit-scrollbar,
+  .notification_inner::-webkit-scrollbar,
+  .services_inner.contracts_inner::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+  }
+  
+  .chat_inner::-webkit-scrollbar-thumb,
+  .left_sidebar_links::-webkit-scrollbar-thumb,
+  .notification_inner::-webkit-scrollbar-thumb,
+  .services_inner.contracts_inner::-webkit-scrollbar-thumb {
+    background-color: #C8D0D0;
+    border-radius: 8px;
+  }
+  .driver_profile_modal .driver_image img{
+  width: 82px;
+  height: 82px;
+  outline: 1px dashed #2A932A;
+  border-radius: 100%;
+  padding: 2px;
+  }
+  .driver_profile_modal  .star_unfill svg path {
+    fill: transparent;
+    stroke: #f09940;
+  }
+  .driver_modal_profile h6{
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #2F4F4F;
+  }
+  .driver_modal_profile .driver_name span{
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #2A932A;  
+    background: #2A932A1A;
+    padding: 7px 15px;
+    border-radius: 40px;
+  }
+  .driver_modal_profile .driver_rating span{
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #2F4F4F;  
+  }
+  .driver_all_reviews button{
+    background: transparent;
+    border: none;
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #2F4F4F;
+  text-transform: capitalize;
+  padding: 0px 30px;
+  }
+  .driver_all_reviews button::after {
+    content: '';
+    background-image: url(../images/dropdown-icon.svg);
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 3px;
+  }
+  .driver_all_reviews .all_reviews_box{
+    display: none;
+  }
+  .all_review_content p{
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #2F4F4F;
+  text-transform: capitalize;
+  }
+  .all_review_content h5{
+    font-family: Axiforma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #2F4F4F;
+  }
+  .all_review_content h5 span{
+    color: #2F4F4FBF;
+  }
+  .driver_all_reviews .review p{
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #2F4F4FBF;  
+  }
+  .driver_all_reviews .review  span{
+    color: #F09940;
+    font-size: 18px;
+    display: flex;
+    gap: 7px;
+  }
+  /* chat sec css end */
+  
+  /* chat view sec css start */
+  .right_sidebar_info .view_agreement a,
+  .right_sidebar_info .view_agreement button.btn {
+    color: #0060FD;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+  }
+  
+  .payments_modal .modal-dialog {
+    max-width: 500px;
+    margin-top: 130px;
+  }
+  
+  .payments_modal .modal-dialog .modal-content {
+    background-image: url(../images/payments-modal-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .payments_modal .modal-header {
+    margin: 30px 25px 0px;
+    padding-bottom: 30px;
+  }
+  
+  .payments_modal .modal-body {
+    padding: 30px 30px;
+  }
+  
+  .payments_modal button.close_btn {
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: none;
+    padding: 0px;
+    width: 30px;
+  }
+  
+  .payments_modal .modal-header h4 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .payment_milestone_total span.payment_pending,
+  .payment_milestone_total span.payment_recieved,
+  .payment_pending {
+    color: #F00;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: capitalize;
+  }
+  
+  .payment_milestone_total span.payment_recieved, .milestone_content span.payment_recieved{
+    color: #2A932A;
+  }
+  
+  a.dowload_inovice {
+    color: #0060FD;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: capitalize;
+  }
+  
+  .payments_modal .payment_milestone_total span.total_milestone_heading {
+    color: #2F4F4F;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  /* chat view sec css end */
+  
+  /* create new agreement css start */
+  .create_new_agreement,
+  .saved_agreement_sec,
+  .view_agreement_sec,
+  .notification_sec,
+  .user_profile_dashboard {
+    padding: 150px 0px 50px;
+  }
+  
+  .create_new_agreement h4,
+  .agreement_heading h4 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  .create_new_agreement .milestone_option_content {
+    padding-left: 18px;
+  }
+  .create_new_agreement h4{
+    text-transform: none;
+  }
+  .agreement_form,
+  .payment_method {
+    padding: 22px 30px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .agreement_form label {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .agreement_form input,
+  .agreement_form textarea {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #fff;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 16px;
+  }
+  
+  .agreement_form textarea {
+    color: #2f4f4fbf;
+    height: 160px;
+    resize: auto;
+    overflow: hidden;
+  }
+  
+  .agreement_form .input_field {
+    margin-bottom: 20px;
+  }
+  
+  .agreement_form .pencil_icon {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 3.5px;
+    background: #E8E8E8;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15) inset;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .payment_method_heading h5 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .payment_method_heading p {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  
+  .payment_option label {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .milestone_option_content p {
+    color: #2f4f4fbf;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  .payment_method_options {
+    border-bottom: 1px solid #00000012;
+  }
+  
+  .payment_option input[type=radio]:checked {
+    accent-color: #2A932A;
+  }
+  
+  .options_content {
+    display: none;
+    padding: 20px 0px;
+    border-bottom: 1px solid #00000012;
+  }
+  
+  .milestone_option.options_content {
+    display: block;
+  }
+  
+  .options_content p {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  
+  .options_content label {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .options_content input,
+  .options_content select {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 9px 12px;
+  }
+  
+  .options_content select {
+    padding-left: 40px;
+  }
+  
+  .options_content .calander_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+  }
+  
+  .save_agreement {
+    padding: 26px 0px 0px;
+  }
+  
+  .save_agreement .form-check-input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 2px solid #2F4F4FBF;
+  }
+  
+  .save_agreement input:focus {
+    box-shadow: none;
+    border: 2px solid #2F4F4FBF;
+  }
+  
+  .save_agreement input:checked {
+    background-color: #2A932A;
+    border: 2px solid #2A932A;
+  }
+  
+  .save_agreement label {
+    color: #2f4f4fbf;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .cancel_save_btn button {
+    border-radius: 4px;
+    background: #E5E5E5;
+    padding: 15px 50px;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+    border: none;
+  }
+  
+  .cancel_save_btn button.green_btn {
+    background: #2A932A;
+    color: #fff;
+  }
+  
+  .milestone_option .enter_amount {
+    max-width: 330px;
+  }
+  
+  .add_milestone button {
+    color: #0060FD;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* create new agreement css end */
+  
+  /* saved agreement css start */
+  .services_inner .chat_request_box {
+    padding: 16px 20px;
+  }
+  .contracts_overview .chat_request_box.overview_box{
+    min-height: 400px;
+  }
+  .services_inner .chat_user_name h3,
+  .services_inner .chat_user_name span,
+  .services_inner .chat_user_name p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .job_completed_text p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    line-height: normal;
+    text-transform: capitalize;
+  } 
+  .job_completed_text span{
+    color: #FF8C00;
+    font-family: Axiforma;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+  }
+  .services_inner .chat_content p {
+    font-size: 16px;
+  }
+  .contracts_tabs .contracts_inner .chat_request_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .contracts_tabs .contracts_inner .chat_content p, .saved_agreement_content .contracts_inner .chat_content p{
+    overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      padding-bottom: 0px;
+      border-bottom: none;
+  }
+  .contracts_tabs .contracts_inner .chat_content, .saved_agreement_content .contracts_inner .chat_content{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 9px;
+  }
+  .created_date{
+    padding-left: 9px;
+  }
+  .star_unfill  svg {
+    width: 16px;
+  }
+  .services_inner .chat_user_name h5 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+  }
+  
+  .services_inner .chat_acc_dec_btns button {
+    font-size: 16px;
+    padding: 10px 0px;
+  }
+  
+  .services_inner .chat_acc_dec_btns a:hover {
+    color: #000;
+  }
+  
+  .services_inner .agreement_image {
+    border-radius: 8px;
+    background: #0000000d;
+    padding: 9px 9px;
+  }
+  
+  .services_inner .chat_content p {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 18px 0px 10px;
+  }
+  
+  .agreement_heading {
+    margin-bottom: 20px;
+  }
+  
+  .agreement_heading a, .agreement_heading button.edit_agree_btn {
+    color: #FF8C00;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .agreement_heading button.edit_agree_btn:active{
+    border: none;
+    color: #FF8C00;
+  }
+  .agreement_heading a span {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #FF8C00;
+  }
+  
+  /* saved agreement css end */
+  /* view agreement css start */
+  .agreement_box {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 22px 30px;
+  }
+  
+  .agreement_box .insurance_heading {
+    border-bottom: 1px solid #00000012;
+  }
+  
+  .agreement_box h5 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .agreement_box .insurance_heading span {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+    border-radius: 100px;
+    background: rgba(152, 255, 152, 0.75);
+    padding: 4px 12px;
+  }
+  
+  .agreement_content {
+    padding: 20px 0px;
+    border-bottom: 1px solid #00000012;
+    margin-bottom: 20px;
+  }
+  
+  .agreement_content p {
+    color: rgba(47, 79, 79, 0.75);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  .agreement_box .time_duration {
+    gap: 70px;
+  }
+  
+  .agreement_box .time_duration h6 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .agreement_box .time_duration span {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .payment_milestone_total span.total_milestone_heading {
+    color: #FF8C00;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  .payment_milestone_total h6 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .payment_milestone_total h5 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .payment_milestone_total h5 span {
+    color: #2f4f4fb3;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .payment_milestone_total p {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .milestone_dot {
+    width: 12px;
+    height: 12px;
+    background-color: #FF8C00;
+    border-radius: 100%;
+  }
+  
+  .vertical_line .vr {
+    border-radius: 1px;
+    background: #FF8C00;
+    width: 4px;
+  }
+  
+  .payment_milestone_total .payment_send_btn button {
+    border-radius: 4px;
+    background: #2A932A;
+    padding: 7px 0px;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    /* line-height: 125%; */
+    text-transform: capitalize;
+    width: 100%;
+    max-width: 324px;
+    height: 48px;
+  }
+  /* view agreement css start */
+  
+  div#no-chats-found-message {
+    margin-bottom: 0px;
+    font-family: Axiforma;
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .outer_no_found_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  
+  /* notification_sec css start */
+  .notification_sec .notification_inner .notification_sender_img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  
+  .notification_inner {
+    min-height: 200px;
+    /* overflow-y: auto; */
+  }
+  
+  .notification_info {
+    padding: 12px 12px;
+    border-radius: 8px;
+  }
+  
+  .notification_info.active,
+  .notification_inner .notification_info:hover {
+    background: #228B22;
+  }
+  
+  .notification_sender_img {
+    display: contents;
+  }
+  
+  .notification_inner .notification_info.active h6,
+  .notification_inner .notification_info.active span.notification_time,
+  .notification_inner .notification_info:hover h6,
+  .notification_inner .notification_info:hover span.notification_time {
+    color: #fff;
+  }
+  
+  .notification_inner .notification_info h6 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  .notification_inner span.notification_time {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  
+  /* notification_sec css end */
+  
+  /* user_profile_dashboard css start */
+  /* dashboard sidebar css start*/
+  .user_profile_dashboard .sidebar_menu {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    padding: 20px 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .profile_info img {
+    border-radius: 100%;
+    border: 2px solid #228B22;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .profile_sidebar .profile_info h6 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .profile_sidebar .profile_info span {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    word-break: break-all;
+  }
+  
+  .sidebar_menu h5.menu_heading {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .dahsboard_menu .menu_icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 8px;
+    background: #F2F2F2;
+  }
+  
+  .dahsboard_menu .menu_name h4 {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .dahsboard_menu.active .menu_name h4 {
+    color: #2A932A;
+    font-weight: 700;
+  }
+  
+  .dahsboard_menu.active svg path,
+  .dahsboard_menu:hover svg path {
+    fill: #2A932A;
+    transition: all 2s ease;
+  
+  }
+  
+  .dahsboard_menu:hover .menu_name h4 {
+    color: #2A932A;
+    transition: all 2s ease;
+  
+  }
+  
+  .dahsboard_menu.active .menu_icon,
+  .dahsboard_menu:hover .menu_icon {
+    background-color: #2A932A1A;
+  }
+  
+  .dahsboard_menu.active:after,
+  .dahsboard_menu:hover:after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/menu-after.svg);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 10px;
+    right: -22px;
+    top: 0px;
+    transition: all 2s ease;
+  }
+  
+  .sidebar_bottom .dahsboard_menu .menu_name h4 {
+    color: #FF3939;
+  }
+  
+  .sidebar_bottom .dahsboard_menu .menu_icon {
+    background-color: #FF39391A;
+  }
+  
+  .sidebar_bottom .dahsboard_menu.active:after,
+  .sidebar_bottom .dahsboard_menu:hover:after {
+    display: none;
+  }
+  
+  .sidebar_bottom .dahsboard_menu.active svg path,
+  .sidebar_bottom .dahsboard_menu:hover svg path {
+    fill: #FF3939;
+  }
+  .delete_acc_modal h5{
+    font-family: Axiforma;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .delete_acc_modal .btns button{
+    background: #b3b3b3;
+    padding: 5px 20px;
+    color: #fff;
+  }
+  
+  .delete_acc_modal .btns button.dlt_btn{
+    background: #e31b1b;
+    color: #fff;
+  }
+  .delete_acc_modal p, .success_modal p{
+    font-size: 18px;
+    font-family: Axiforma;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .user_acc_delete p{
+    text-align: center;
+  }
+  .success_modal p{
+    font-size: 22px;
+  }
+  .user_acc_delete button.close, .success_modal button.close{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #000000B2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .success_modal .modal-content{
+    padding: 50px 10px;
+  }
+  .success_modal .check_icon{
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  margin: 10px auto 20px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(67, 218, 3, 0.2) 0px 7px 29px 0px;
+  }
+  .success_modal svg{
+    fill: #fff;
+  }
+  /* dashboard sidebar css end*/
+  
+  .dashboard_right_info h4 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .dashboard_right_info h4::after {
+    content: '';
+    width: 34px;
+    height: 2px;
+    background: #2F4F4F;
+    display: block;
+  }
+  
+  .dashboard_content {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    padding: 28px 17px;
+    margin-top: 14px;
+  }
+  
+  .dashboard_content .profile_img {
+    height: 144px;
+  }
+  
+  .dashboard_content .change_profile_pic {
+    border-radius: 100%;
+    height: 144px;
+    width: 144px;
+    border: 1px dashed #2A932A;
+  }
+  
+  .dashboard_content .profile_img .change_profile_pic img {
+    border-radius: 100%;
+    height: 140px;
+    width: 140px;
+  }
+  
+  .change_profile_icon {
+    bottom: 0px;
+    right: 9px;
+  }
+  
+  .change_profile {
+    display: flex;
+    gap: 55px;
+  }
+  
+  .change_profile_info label,
+  .dashboard_content .change_language label {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .change_profile_info input,
+  .change_profile_info .input_fields select,
+  .dashboard_content .change_language button, .dashboard_content .change_language select {
+    border-radius: 4px;
+    border: 1px solid #0000001a;
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+  }
+  .dashboard_content .change_language select{
+    background-image: url(../images/dropdown-icon.svg); /* Replace with your custom arrow image */
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+  .change_language button{
+    background-color: transparent;
+  }
+  .change_language button::after{
+    content: '';
+    background-image: url(../images/dropdown-icon.svg);
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 12px;
+  }
+  .availabily_hours_box{
+    border: 1px solid #0000001A;
+    background-color: #fff;
+    border-top: 1px solid #0000001A;
+    padding: 0px 12px;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    z-index: 9;
+  }
+  .availabily_hours_box span{
+    font-family: Axiforma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #2F4F4F;
+  }
+  .availabily_hours_box .form-check {
+    text-align: end;
+  }
+  .availabily_hours_box .form-check .form-check-input{
+  float: unset;
+  }
+  .availabily_hours_box .form-check .form-check-input{
+    background-color: #A9A9A9;
+    --bs-form-switch-bg: url(../images/Ellipse.png);
+    background-size: 12px;
+    padding: 8px;
+  }
+  .dashboard_content  .form-switch label{
+    color: #2B942B;
+    font-family: Axiforma;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19px;
+  }
+  .availabily_hours_box .not_available label{
+    color: #A9A9A9;
+    }
+  .availabily_hours_box .form-switch .form-check-input:checked{
+  background-color: #2B942B;
+  border: 1px solid #2B942B;
+  }
+  .availabily_hours_box .form-switch .form-check-input:focus{
+    border: 1px solid #2B942B;
+  }
+  .hours_avail {
+    border-bottom: 1px solid #0000001A;
+    padding: 14px 0px;
+  }
+  .hours_avail:last-child{
+    border-bottom: none;
+  }
+  .form_fields {
+    padding: 20px 0px;
+    border-bottom: 1px solid #0000001A;
+  }
+  .form_fields:last-child{
+    border-bottom: none;
+  }
+  h5.field_heading {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 125%;
+  }
+  
+  .add_services .add_services_btn, .add_services .services_name h6, .add_services .services_name button {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    border-radius: 100px;
+    background: #ECECEC;
+    padding: 6px 56px;
+    gap: 8px;
+  }
+  .write_service_btn .add_button_pos {
+    position:absolute; 
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 99;
+  }
+  .write_service_btn .add_services_btn{
+    padding: 6px 50px 6px 10px;
+  }
+  .write_service_btn .add_button_pos button{
+    background: #2A932A;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 21px;
+    padding: 0px 12px; 
+  }
+  .add_button_pos {
+    display: none; /* Hide by default */
+  }
+  .add_services .services_name h6, .add_services .services_name button.selected {
+    background: rgba(152, 255, 152, 0.75);
+    cursor: pointer;
+  }
+  .optional-Categories-Container .services-name h6{
+    background: rgba(152, 255, 152, 0.75);
+    border-radius: 25px;
+    padding: 5px 25px;
+    margin-bottom: 10px !important;
+  }
+  div#optional-Categories-Container {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  button.close {
+    background: rgba(0,0,0,70%) !important;
+    border: transparent;
+    font-size: 22px;
+    position: absolute;
+    right: -10px;
+    top: -11px;
+    border-radius: 50%;
+    width: 36px;
+    color: #fff !important;
+  }
+  .agreement_heading button {
+    background: transparent;
+    border: transparent;
+    color: #FF8C00;
+  }
+  .alert-dismissible {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  #show-response-message .aalert {
+    background: green;
+    color: #ffd;
+    padding: 3px 10px;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    border-radius: 7px;
+    margin-top: 10px;
+  }
+  #show-response-message .aalert button span {
+    color: #fff;
+  }
+  .add_services .services_name h6{
+    padding: 6px 20px !important;
+  }
+  .services_name.optional_subcategory {
+    display: inline-block;
+  }
+  .add_services .services_name button{
+    border: none;
+  }
+  .write_service_btn input{
+    background: transparent;
+    border: none;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+  .write_service_btn input:focus{
+    background: transparent;
+  }
+  .change_profile_info {
+    width: 100%;
+    max-width: 630px;
+  }
+  
+  p.profile_verified {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  
+  /* user_profile_dashboard css end */
+  /* setting dashboard css start */
+  .setting_content_form {
+    width: 100%;
+    max-width: 330px;
+  }
+  
+  .setting_content .cancel_save_btn button {
+    padding: 14px 40px;
+  }
+  
+  /* setting dashboard css end */
+  /* contracts dashboard css start */
+  .contracts_tabs .nav-tabs {
+    width: max-content;
+    border-radius: 124.759px;
+    border: 2px solid #73BB20;
+    background: #FFF;
+    padding: 10px 10px;
+  }
+  
+  .contracts_tabs .tabs_header {
+    padding-bottom: 20px;
+  }
+  
+  .contracts_tabs .nav-tabs button {
+    color: #A9A9A9;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+    border-radius: 30px;
+    padding: 9px 35px;
+    border: none;
+  }
+  
+  .contracts_tabs .nav-tabs button.active {
+    color: #fff;
+    background: #2A932A;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  
+  .tabs_header .search_input input {
+    background: #fff;
+    border: 1px solid #E3E8E7;
+    border-radius: 8px;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 7px 30px 7px 50px;
+    color: #A9A9A9;
+  }
+  
+  .tabs_header .search_input input::placeholder {
+    color: #A9A9A9;
+  }
+  
+  .tabs_header .search_input .search_icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .search_contracts button {
+    border: 1px solid #E3E8E7;
+    background-color: transparent;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #A9A9A9;
+  }
+  
+  .search_contracts .dropdown-toggle::after {
+    display: none;
+  }
+  
+  .search_contracts .dropdown ul {
+    padding: 0px 12px;
+    border: 1px solid #0000001A
+  }
+  
+  .search_contracts .dropdown .dropdown-item {
+    padding: 12px 0px;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #A9A9A9;
+    border-bottom: 1px solid #0000001A;
+    transition: all 0.3s ease;
+  }
+  
+  .search_contracts .dropdown li:last-child .dropdown-item {
+    border: none;
+  }
+  
+  .search_contracts .dropdown .dropdown-item.active_link {
+    color: #2B942B;
+  }
+  
+  .search_contracts .dropdown .dropdown-item:hover {
+    background-color: transparent;
+    color: #2B942B;
+  }
+  
+  .contracts_inner .created_date p,
+  .saved_agreement_content .created_date p {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  
+  .contracts_inner .created_date span,
+  .saved_agreement_content .created_date span {
+    color: #FF8C00;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+  }
+  
+  .contracts_inner .chat_content p,
+  .saved_agreement_content .chat_content p {
+    padding: 12px 0px 14px;
+  }
+  
+  .agreement-modal button.close_btn {
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: none;
+    padding: 0px;
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .agreement-modal .agreement_heading button{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: #446565;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .agreement-modal .agreement_heading button.dlt_agreement_btn{
+    background-color: rgb(194, 7, 7);
+  }
+  .agreement-modal .agreement_heading button svg{
+    fill: #fff;
+  }
+  .agreement-modal .modal-header {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding: 30px 30px 20px;
+  }
+  .contract_agreement_modal .modal-dialog{
+    max-width: 1220px;
+  }
+  
+  .agreement-modal .modal-body {
+    padding: 30px 30px;
+  }
+  
+  .contracts_inner .time_duration {
+    gap: 70px;
+  }
+  
+  .contracts_inner .time_duration h6 {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .services_inner.contracts_inner {
+    height: 848px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 3px 5px;
+  }
+  
+  .contracts_inner .time_duration span {
+    color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 125%;
+    text-transform: capitalize;
+  }
+  
+  .overview_box {
+    box-shadow: 0px 0px 15px 0px #00000026;
+  
+  }
+  
+  .overview_box .chat_content p {
+    color: #2F4F4FBF;
+  }
+  
+  .driver_feddback {
+    box-shadow: 0px 0px 15px 0px #00000026;
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px 20px;
+  }
+  
+  .driver_feddback h6 {
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #2F4F4F;
+  }
+  
+  .driver_feddback button {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .driver_feddback button:focus-visible {
+    outline: none;
+  }
+  
+  .driver_feddback span,
+  .driver_feddback button {
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #0060FD;
+    text-transform: capitalize;
+  }
+  
+  .feedback_content p {
+    font-family: Axiforma;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+    color: #2F4F4FBF;
+  }
+  
+  .contracts_content .right_sidebar_info .right_sidebar_header,
+  .contracts_content .chat_process_info {
+    border-left: 1px solid #E3E8E7;
+  }
+  
+  .contracts_content .right_sidebar_info .right_sidebar_header {
+    border-top-left-radius: 12px;
+  }
+  
+  .contracts_content .chat_inner {
+    height: 592px;
+  }
+  
+  .services_inner.contracts_inner.contracts_overview {
+    overflow: unset;
+  }
+  
+  /* contracts dashboard css end */
+  /* feedback modal css start */
+  .add_feedback .modal-body h4 {
+    font-family: Axiforma;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    color: #2F4F4F;
+  }
+  
+  .add_feedback .modal-body textarea {
+    height: 120px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 2px 2px 0px #0000002E;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #A9A9A9;
+    margin: 12px 0px 20px;
+  }
+  
+  .add_feedback .modal-body textarea::placeholder {
+    color: #A9A9A9;
+  }
+  
+  /* feedback modal css end */
+  /* user saved agreement css start */
+  .services_inner.saved_agreement_inner {
+    height: 940px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 3px 5px;
+  }
+  
+  /* user saved agreement css end */
+  /* transaction css start */
+  .transactions_content .total_earnings_chart {
+    box-shadow: 0px 0px 35px 0px #0000001A;
+    padding: 30px 30px;
+    border-radius: 12px;
+  }
+  
+  .total_earnings_chart .earning_content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .earning_content h6 {
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    color: #2F4F4F;
+  }
+  
+  .earning_content h5 {
+    font-family: Axiforma;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2A932A;
+  }
+  
+  .transaction_list {
+    box-shadow: 0px 0px 35px 0px #0000001A;
+    padding: 20px 20px;
+    border-radius: 12px;
+  }
+  
+  .transaction_list h2 {
+    font-family: Axiforma;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #2F4F4F;
+  }
+  
+  .transaction_sender_profile h6 {
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #2F4F4F;
+  }
+  
+  .transaction_sender_profile h3 {
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #2F4F4FBF;
+  }
+  
+  .transaction_sender_profile span {
+    background-color: #383838;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Axiforma;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    border-radius: 100%;
+  }
+  
+  .transaction_credited span {
+    font-family: Axiforma;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #2F4F4F;
+  }
+  
+  .transaction_credited span.credited_cash {
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2A932A;
+  }
+  
+  .transaction_credited a.download_invoice {
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #0060FD;
+    text-transform: capitalize;
+  }
+  
+  .transaction_list .list_inner li {
+    box-shadow: 0px 0px 4px 0px #00000040;
+    padding: 10px 20px;
+    border-radius: 12px;
+  }
+  
+  /* transaction css end */
+  /* reviews css start */
+  .dashboard_right_info h4.reviews_heading::after{
+    content: none;
+  }
+  .review_content .review_list li{
+    box-shadow: 0px 0px 4px 0px #00000040;
+  padding: 10px 15px;
+  border-radius: 8px;
+  }
+  .review_content .review_list h6{
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #2F4F4F;
+  text-transform: capitalize;
+  }
+  .review_content .review_list .star_unfill svg path{
+    fill: transparent;
+    stroke: #f09940;
+  }
+  .review_content .review_list .review_date h2{
+    font-family: Axiforma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #2F4F4F;
+  }
+  .review_content .review_list p{
+    font-family: Axiforma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #2F4F4FBF;
+  }
+  .review_content .review_list .review_date h2 span{
+    color: #2F4F4FBF;
+  }
+  .review_content .feedback_content p{
+    font-style: normal;
+  }
+  .review_content .star_img{
+    display: flex;
+  }
+  .review_content .feedback_rating{
+  margin: 5px 0px;
+  }
+  /* reviews css end */
+  /* add_payment_method css start */
+  .add_payment_method{
+    margin-top: 40px;
+  }
+  .add_payment_method h5{
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #2F4F4F;
+  }
+  .payment_card span{
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #0060FD;
+  margin-top: -10px;
+  }
+  .payment_card{
+    cursor: pointer;
+  }
+   /* .payment_method_info {
+    display: none; 
+  } */
+  .payment_method_content {
+    display: block;
+  }
+  .payment_method_info{
+    width: 100%;
+    max-width: 330px;
+  }
+  .payment_method_info label{
+    font-family: Axiforma;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #A9A9A9;
+  }
+  .payment_method_info input{
+    border: 1px solid #0000001A;
+    border-radius: 4px;
+    font-family: Axiforma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #2F4F4F;
+  padding: 8px 12px;
+  /* width: 400px; */
+  }
+  button#uploadBtn {
+    background: transparent;
+    border: 1px solid transparent;
+  }
+  span.payment_methid_trashbin i {
+    color: red;
+  }
+  .payment_method_info p{
+    font-family: Axiforma;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 15px;
+  color: #2F4F4FBF;
+  }
+  .add_new_payment_method h6{
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #2F4F4F;
+  }
+  .add_new_payment_method .payment_card{
+    border-bottom:1px solid #0000001A;
+  }
+  .card_outer{
+    background: linear-gradient(106.15deg, #3431C2 6.17%, #CD2525 102.88%);
+  width: 180px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 15px 12px;
+  }
+  .card_outer:after{
+    background-image: url(../images/Effect.png);
+    position: absolute;
+    content: '';
+    height: 90px;
+    width: 164px;
+    bottom: 0px;
+    left: 0px;
+  }
+  .card_outer span {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #FFFFFF;
+    font-family: Axiforma;
+  }
+  .card_holder_name input{
+    font-family: Axiforma;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 13px;
+    background: transparent;
+    border: none!important;
+    color: #FFFFFF;
+    padding: 0px;
+  }
+  .card_holder_name input:focus{
+    background-color: transparent;
+    color: #fff;
+  }
+  .saved_payment_card{
+    padding: 20px 0px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .saved_payment_card h5{
+    font-family: Axiforma;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #2F4F4F;
+  text-transform: capitalize;
+  }
+  
+  .card_checkbox label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #2F4F4FBF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .card_checkbox input:checked + label:before{
+    border: 2px solid #2A932A;
+  }
+  .card_checkbox input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .card_checkbox .form-group input {
+    display: none;
+  }
+  
+  .card_checkbox .form-group label {
+    position: relative;
+    cursor: pointer;
+    color: #2F4F4FBF;
+    font-family: Axiforma;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;  
+  }
+  .saved_card_list{
+    border-bottom: 1px solid #0000004D;
+    padding: 15px 0px;
+  }
+  
+  .card_checkbox .form-group input:checked + label{
+    color: #2A932A;
+  }
+  .card_checkbox .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 6px;
+    height: 11px;
+    border: solid #2A932A;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  
+  }
+  .card_checkbox {
+    margin-top: 12px;
+  }
+  .saved_payment_card .cancel_save_btn button{
+    max-width: 180px;
+    width: 100%;
+  }
+  /* add_payment_method css end */
+  
+  /* footer css start */
+  footer {
+    padding: 40px 20px;
+    background: #F2F2F2;
+    z-index: 2;
+    position: relative;
+  }
+  
+  footer .social_acc {
+    border-radius: 100%;
+    background: #333;
+    height: 40px;
+    width: 40px;
+  }
+  
+  footer h6 {
+    color: #333;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  p.footer_copyright {
+    color: #333;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .footer_links ul li a {
+    color: #333;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 0px 15px;
+  }
+  
+  .footer_links ul li a {
+    border-right: 1px solid #1E1F1E;
+  }
+  
+  .footer_links ul li:last-child a {
+    border: none;
+  }
+  
+  /* footer css end */
+  
+  /* without login modal css start */
+  .without_login_modal .modal-body{
+  background-image: url(../images/modal-bg.png);
+  background-size: cover;
+  padding: 100px 90px;
+  border-radius: 8px;
+  }
+  .without_login_modal button.close_btn{
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  z-index: 1;
+  }
+  .without_login_modal .modal-body p{
+    font-family: Axiforma;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #333333;
+  }
+  .without_login_modal .modal-body p a{
+    color: #2A932A;
+    font-weight: 700;
+  }
+  .without_login_modal .modal-dialog{
+    max-width: 550px;
+    margin-top:15%;
+  }
+  .without_login_modal button.close_btn {
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: none;
+    padding: 0px;
+    width: 30px;
+  }
+  /* without login modal css end */
+  
+  
+  .insurence_tab {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .insurence_tab .form-check input, .subcategory_tab .form-check input{
+    display: none;
+  }
+  
+  /* Custom CSS  */
+  
+    
+  
+  
+  .add_services .add_button_pos button{
+    background: #2A932A;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 21px;
+    padding: 0px 12px;
+  }
+  
+  
+  
+  .pdf-preview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin-right: 10px;
+    /* Add styles for the thumbnail image or placeholder */
+  }
+  
+  .pdf-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pdf-info img {
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin-right: 10px;
+  }
+  
+  
+  
+  
+  .play-layer-wrapper {
+    position: relative;
+  }
+  
+  .play-layer {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    width: 35%;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    margin: -2rem auto 6rem;
+  }
+  
+  .progress-color {
+    background: #1389e9;
+    height: 100%;
+    width: 0;
+    border-radius: 30px;
+    transition: width 4s linear;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  @keyframes scale1 {
+    0% {
+      transform: scaleY(0.6);
+    }
+    40% {
+      transform: scaleY(1.2);
+    }
+    100% {
+      transform: scaleY(0.6);
+    }
+  }
+  .bar-scale1 {
+    animation: scale1 0.6s infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes scale2 {
+    0% {
+      transform: scaleY(0.5);
+    }
+    30% {
+      transform: scaleY(1.6);
+    }
+    100% {
+      transform: scaleY(0.5);
+    }
+  }
+  .bar-scale2 {
+    animation: scale2 0.6s infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes scale3 {
+    0% {
+      transform: scaleY(1.5);
+    }
+    70% {
+      transform: scaleY(0.5);
+    }
+    100% {
+      transform: scaleY(1.5);
+    }
+  }
+  .bar-scale3 {
+    animation: scale3 0.6s infinite;
+    transform-origin: center;
+  }
+  
+  .stop-animation {
+    animation-duration: 0s;
+  }
+  
+  .audio-buttons {
+    position: relative;
+  }
+  
+  .play-button svg {
+  
+    border-radius: 50px;
+  }
+  
+  .play-button, .pause-button {
+    width: 46px;
+    height: 46px;
+    /* position: absolute; */
+    bottom: 0;
+    left: 50%;
+    transform: translateY(19%);
+  }
+  
+  .chat_reciever .receiver_img img {
+    border-radius: 10px;
+  }
+  .img_chat{
+    background: none;
+  }
+  .add_skills input{
+    color: #2F4F4F;
+      font-family: Axiforma;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.14px;
+      border-radius: 100px;
+      background: #ECECEC;
+      padding: 6px 10px 6px 50px;
+  }
+  .add_skills .write_service_btn{
+    width: fit-content;
+  }
+  .add_skills .write_service_btn input:focus{
+    background-color: #ECECEC;
+  }
+  .add_skills .write_service_btn .plus_icon{
+    position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+  }
+  .add_skills .skills_name h6{
+    background: rgba(152, 255, 152, 0.75);
+    border-radius: 25px;
+    padding: 5px 25px;
+  }
+  #add-the-skills{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .write_service_btn_inner{
+    width: fit-content;
+    position: relative;
+  }
+  .create_agreement_links{
+    display: flex;
+    gap: 5px;
+  }
+  .create_agreement_links button{
+    background-color: transparent;
+    font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #0060FD;
+  }
+  .notification_icon, .chat_icon{
+    cursor: pointer;
+  }
+  .audio_icon{
+    background-color: #307145;
+    height: 40px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .audio_icon svg{
+    fill: #fff;
+  }
+  .chat_date{
+    position: relative;
+  }
+  .chat_date::after{
+    content: '';
+    background-color: #e7e5e5;
+    height: 1px;
+    width: 43%;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  .chat_date::before{
+    content: '';
+    background-color: #e7e5e5;
+    height: 1px;
+    width: 43%;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  
+  }
+  .enter_description{
+    max-width: 330px;
+  }
+  .remove-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .leave_feedback_box button{
+    border-radius: 30px;
+      padding: 5px 20px;
+      background: #29932a;
+      color: #fff;
+      border: none;
+      font-family: Axiforma;
+      font-size: 14px;
+      margin-left: auto;
+      text-transform: capitalize;
+  }
+  .modal .milestone_content{
+  width: 100%;
+  }
+  .response_alert .alert{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .response_alert .alert-success button.close{
+    background: transparent !important;
+    position: unset;
+    color: unset !important;
+    font-size: unset;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .add_payment_method_modal button{
+  background-color: #2A932A;
+  max-width: 80px;
+  width: 100%;
+  font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  }
+  .add_payment_method_modal h5{
+    font-family: Axiforma;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #2F4F4F;
+  }
+  .add_payment_method_modal button p{
+  color: #2F4F4F;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .chat_process .msg_count span{
+    background: #FF8C00;
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chat_process .msg_count span{
+    color: #FFFFFF;
+    font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 15px;
+  
+  }
+  
+  .chat_reciever .chat_time {
+    position: absolute;
+    left: 50px;
+    bottom: -23px;
+  }
+  /* .chat_sender .chat_time {
+    position: relative;
+    right: 47px;
+    bottom: 5px;
+  } */
+  .playback {
+    padding-left: 30px;
+  }
+  .playback audio {
+    height: 37px;
+  }
+  
+  /* font kit start here */
+  @font-face {
+    font-family: 'Axiforma';
+    src: url('../fonts/Axiforma-Black.woff2') format('woff2'),
+        url('../fonts/Axiforma-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Axiforma';
+    src: url('../fonts/Axiforma-Medium.woff2') format('woff2'),
+        url('../fonts/Axiforma-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Axiforma';
+    src: url('../fonts/Axiforma-Bold.woff2') format('woff2'),
+        url('../fonts/Axiforma-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Axiforma';
+    src: url('../fonts/Axiforma-SemiBold.woff2') format('woff2'),
+        url('../fonts/Axiforma-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Axiforma';
+    src: url('../fonts/Axiforma-Regular.woff2') format('woff2'),
+        url('../fonts/Axiforma-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* font kit end here */
+  
+  .calling_accept_decline_modal button.close_btn {
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: none;
+    padding: 0px;
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 99;
+  }
+  
+  .calling_accept_decline_modal .call_icon svg {
+    fill: #2A932A;
+  }
+  .calling_accept_decline_modal h3{
+    font-size: 28px;
+    font-family: Axiforma;
+    font-weight: 700;
+    color: #2F4F4F;
+  }
+  .calling_accept_decline_modal p{
+    font-size: 20px;
+    font-family: Axiforma;
+    font-weight: 400;
+    color: #232323;
+  }
+  .calling_accept_decline_modal .modal-body{
+    padding: 30px 25px;
+  }
+  .call_accept_decline_btn button{
+  padding: 10px 35px;
+  background: #2A932A;
+  font-family: Axiforma;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+  color: #fff;
+  }
+  .call_accept_decline_btn button:hover{
+    background-color: #2A932A;
+    color: #fff;
+  }
+  .call_accept_decline_btn button.decline_btn,.call_accept_decline_btn button.decline_btn:hover{
+    background-color: #e70f00;
+  }
+  iframe#\:0\.container{
+    display:none;
+  }
+  .support_sec .right_sidebar_info .right_sidebar_header, .support_sec .chat_process_info{
+    border-left: 1px solid #E3E8E7;
+  }
+  .support_sec .right_sidebar_info .right_sidebar_header{
+    border-radius:12px 12px 0px 0px;
+  }
+  .support_sec .chat_process_info{
+    border-radius:0px 0px 12px 12px;
+  }
+  
+  
+  /*  loader css */
+  
+  #loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: None;
+    z-index: 9999;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.50);
+  }
+  
+  #loading::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
+  .loading-overlay {
+    display: none;
+    background: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-overlay.is-active {
+    display: flex;
+  
+  }
+  #loading.home_loader{
+    position: fixed;
+  }
+  /*end loader css */
+  
+  .prodrive-pagination li a{
+    color: #2A932A;
+    font-family: Axiforma;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    height:35px;
+    width:35px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    }
+    .prodrive-pagination li a.active{
+      background-color:#2A932A;
+      color: #fff;
+    }
+    .prodrive-pagination li a:hover{
+      background-color:#2A932A;
+      color: #fff;
+    }
+  
+    .description_data h5{
+      font-size:17px;
+      margin: 0;
+    }
+    .description_data p{
+      font-size:16px;
+      margin: 0;
+    }
+    .description_data{
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+      padding: 17px 17px;
+      margin-top: 14px;
+      width: 430px;
+      height: auto;
+      margin-bottom: 20px;
+      border: 1px solid #9999994f;
+    }
+    .active_description_data{
+      border: 3px solid #1a8754;
+    }
+    .outer_description_data {
+      height: 370px;
+      overflow: auto;
+      padding:10px;
+  }
+  .dashboard_tokens{
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    padding: 17px 17px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+  }
+  .discount_detail_box{
+  margin-top: 40px;
+  border-radius: 8px;
+  }
+  .discount_detail_box .retrive_driver_details_table{
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    padding: 28px 17px;
+  }
+  .discount_detail_box .discount_detail_table{
+    min-height: 100px;
+    height: 400px;
+    overflow: auto;
+  }
+  .discount_detail_box .retrive_driver_details_table th, .discount_detail_box .retrive_driver_details_table td{
+    font-family: 'Axiforma';
+  }
+  .discount_detail_box .retrive_driver_details_table td{
+    vertical-align: middle;
+  }
+   .outer_description_data_outer{
+    min-height: 100px;
+    height: 400px;
+  }
+  .discount_detail_box .dahsboard_heading h6{
+    color: #2F4F4F;
+      font-family: Axiforma;
+      font-size: 18px;
+      font-weight: 700;
+  }
+  .discount_detail_box .dlt_icon{
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  color: #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d70909;
+  cursor: pointer;
+  }
+  .no_discount h6{
+    color: #2F4F4F;
+      font-family: Axiforma;
+      font-size: 20px;
+      font-weight: 700;
+  }
+  .no_discount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

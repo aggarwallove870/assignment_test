@@ -1,0 +1,590 @@
+/* responsive css start */
+@media(max-width:1200px) {
+    .chat_process .sidebar_info h5 {
+        font-size: 14px;
+    }
+
+    .chat_process .sidebar_info p {
+        font-size: 12px;
+        width: 115px;
+    }
+
+    .user_info_image img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .transactions_content .total_earnings_chart {
+        padding: 20px 20px;
+    }
+
+    .earning_content h6 {
+        font-size: 14px;
+    }
+
+    .earning_content h5 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:992px) {
+    header .navbar-toggler {
+        background-color: #228B22;
+        color: #fff;
+    }
+
+    header .navbar-collapse {
+        background: #fff;
+        z-index: 9;
+        padding: 10px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: #228b2242 0px 3px 4px;
+
+    }
+    header.home_without_login_header, header.home_header{
+        z-index: 99!important;
+    }
+
+    .home_without_login_header .navbar-nav li a {
+        color: #000;
+    }
+
+    .home_without_login_header .navbar-nav li a.active {
+        color: #228B22;
+    }
+
+    header .navbar-nav li a {
+        padding: 3px 0px;
+    }
+
+    header.home_header .navbar-toggler {
+        background-color: #ffffff;
+        color: #228B22;
+    }
+
+    header.home_header .navbar-collapse {
+        background: #2a932a;
+        box-shadow: #ffffff42 0px 3px 4px;
+    }
+
+    .get_in_touch_content h2,
+    .download_app_content h2 {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 33.984px;
+    }
+
+    .chat_sec {
+        padding: 100px 20px 50px;
+    }
+
+    .active_chat_user_name h5 {
+        font-size: 16px;
+    }
+
+    .chat_process .sidebar_info {
+        gap: 5px;
+        margin: 0px 11px;
+    }
+
+    .chat_process .sidebar_info.active_chat {
+        padding: 16px 11px;
+    }
+
+    .user_data {
+        width: 100%;
+        max-width: 75%;
+    }
+
+    .toggle-btn {
+        width: 34px;
+        height: 34px;
+        border: 0;
+        background: #2A932A1A;
+    }
+
+    .toggle-btn span {
+        width: 100%;
+        display: block;
+        height: 2px;
+        background: #2A932A;
+        margin: 6px 0;
+    }
+
+    .user_profile_dashboard .profile_sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 999;
+        padding: 16px 0;
+        max-width: 280px;
+        width: 100%;
+        box-shadow: 0 0 10px #ccc3;
+        transform: translateX(-100%);
+        transition: all 0.4s ease-in-out;
+        right: 0;
+        overflow-y: auto;
+    }
+
+    .menu-open .user_profile_dashboard .profile_sidebar {
+        transform: translateX(0%);
+    }
+
+    .close-btn {
+        position: fixed;
+        left: -100%;
+        transform: translateX(14px);
+        z-index: 99;
+        top: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid #2A932A;
+        border-radius: 5px;
+    }
+
+    .menu-open .close-btn {
+        opacity: 1;
+        visibility: visible;
+        left: 220px;
+    }
+
+    .close-btn svg {
+        stroke: #2A932A;
+        width: 30px;
+    }
+
+    .user_profile_dashboard .sidebar_menu {
+        background-color: transparent;
+        box-shadow: none;
+        border-bottom: 1px solid #0000001A;
+        border-radius: 0px;
+    }
+
+    .user_profile_dashboard .sidebar_menu:last-child {
+        border-bottom: none;
+    }
+
+    body.menu-open::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0, 0.5);
+        z-index: 9;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .agreement-modal .modal-dialog {
+        max-width: 95%;
+    }
+}
+
+@media(max-width:767px) {
+
+    form.register_form .form_inner,
+    form.select_categories_form .form_inner {
+        padding: 25px 30px;
+    }
+
+    .register_sec::before,
+    .register_sec:after {
+        width: 200px;
+    }
+    .bg-green.register_sec:before{
+        width: 100%;
+    }
+
+    .home_chat_request_box {
+        left: 5px;
+    }
+
+    .other_chat_request_box {
+        right: 5px;
+        left: unset;
+    }
+
+    .contract_img {
+        position: unset !important;
+    }
+
+    .download_app_mobile_image {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    .contract_img img {
+        max-width: 220px;
+    }
+
+    .home_sec .scroll_down_arrow {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+    }
+
+    .home_content {
+        padding-bottom: 90px;
+    }
+
+    .right_sidebar_info .right_sidebar_header,
+    .chat_process_info {
+        border-left: 1px solid #E3E8E7
+    }
+
+    .chat_process .sidebar_info p {
+        width: 100%;
+    }
+
+    .user_data {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .user_info_image {
+        width: 60px;
+    }
+
+    .user_info_image img {
+        height: 50px;
+        width: auto;
+    }
+
+    .left_sidebar_content,
+    .right_sidebar_info .right_sidebar_header {
+        border-radius: 0px;
+    }
+
+    .chat_process .all_messages {
+        padding: 10px 11px 0px;
+    }
+
+    .chat_process .serach_input_box {
+        padding: 10px 11px 8px;
+    }
+
+    .chat_process .serach_icon {
+        top: 15px;
+        left: 24px;
+    }
+
+    .services_inner .chat_content p {
+        padding-top: 5px;
+    }
+
+    .agreement-modal .modal-body,
+    .agreement-modal .modal-header {
+        padding: 15px 15px;
+    }
+    .notification{
+        width: 50%;
+    }
+    .left_sidebar_links{
+        height: 120px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+    header .navbar-brand img {
+        width: 170px;
+    }
+
+    .register_sec {
+        padding: 130px 10px 80px;
+    }
+
+    .footer_links ul li a {
+        padding: 0px 8px;
+        font-size: 14px;
+    }
+
+    .footer_links ul {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        padding: 20px 20px;
+    }
+
+    .get_in_touch_content h2,
+    .download_app_content h2 {
+        font-size: 25px;
+    }
+
+    .contract_img img,
+    .agreement_img {
+        max-width: 170px;
+
+    }
+
+    .request_tabs .nav-tabs button,
+    .contracts_tabs .nav-tabs button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .contracts_tabs .nav-tabs button {
+        padding: 10px 35px;
+    }
+
+    .contracts_tabs .nav-tabs {
+        margin: 0 auto;
+    }
+
+    .home_sec {
+        padding: 110px 0px 170px;
+    }
+
+    .request_sec .chat_user_name h3 {
+        font-size: 16px;
+    }
+
+    .request_sec .chat_content p {
+        font-size: 14px;
+    }
+
+    .request_sec .chat_user_name p,
+    .request_sec .chat_user_name span {
+        font-size: 12px;
+    }
+
+    .request_sec .tab-content .chat_acc_dec_btns button {
+        font-size: 14px;
+    }
+
+    .request_sec .scroll_down_arrow {
+        padding-bottom: 0px;
+    }
+
+    .get_in_touch {
+        padding: 30px 0px;
+    }
+
+    .contact_us_sec {
+        padding: 120px 0px 60px;
+    }
+
+    .download_app_content h2 {
+        margin-bottom: 10px;
+    }
+
+    .home_content h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .home_content p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .home_content a {
+        font-size: 14px;
+        padding: 10px 22px;
+    }
+
+    .home_content h1 span img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .request_sec .tab-content {
+        padding: 60px 0px 20px;
+    }
+
+    img.user_header_img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .right_sidebar_info .right_sidebar_header {
+        padding: 15px 10px;
+    }
+
+    .create_agreement button.btn {
+        font-size: 14px;
+    }
+
+    .user_info_image img {
+        height: 44px;
+    }
+
+    .agreement_box {
+        padding: 15px 14px;
+    }
+
+    .agreement_box .insurance_heading span {
+        font-size: 14px;
+    }
+
+    .payments_modal .modal-header {
+        margin: 20px 20px 0px;
+        padding-bottom: 20px;
+    }
+
+    .payments_modal .modal-body {
+        padding: 20px 20px;
+    }
+
+    .payments_modal .modal-dialog {
+        margin-top: 30px;
+    }
+
+    .change_profile {
+        display: grid;
+        gap: 20px;
+    }
+
+    .dashboard_content .profile_img {
+        width: 144px;
+    }
+
+    .agreement_content p {
+        font-size: 14px;
+    }
+
+    .contracts_inner .time_duration {
+        gap: 20px;
+    }
+
+    .transaction_list .list_inner li {
+        padding: 10px 10px;
+    }
+
+    .transaction_sender_profile span {
+        height: 30px;
+        width: 30px;
+        font-size: 13px;
+    }
+
+    .without_login_modal .modal-body {
+        padding: 100px 10px;
+    }
+}
+
+@media(max-width:480px) {
+    .right_sidebar_info .user_details {
+        justify-content: unset;
+    }
+
+    .contracts_inner .chat_user_name h5,
+    .contracts_inner .chat_user_name h3,
+    .contracts_inner .chat_user_name p {
+        font-size: 14px;
+    }
+
+    .add_feedback .modal-body h4 {
+        font-size: 16px;
+    }
+
+    .saved_agreement_inner .chat_user_name h5,
+    .saved_agreement_inner .chat_user_name h3 {
+        font-size: 14px !important;
+    }
+    .playback{
+        padding-left: 0px;
+    }
+    .playback audio{
+        max-width: 170px;
+    }
+    .right_sidebar_info .chat_footer{
+        margin-right: 5px;
+    }
+    .chat_process_info{
+        padding: 20px 5px 20px 10px;
+    }
+    .notification{
+        width: 80%;
+    }
+
+}
+
+@media(max-width:375px) {
+    .home_chat_request_box {
+        position: unset;
+        margin: 5px auto;
+        max-width: 100%;
+    }
+
+    .home_content {
+        padding-bottom: 40px;
+    }
+
+    .home_sec {
+        padding: 110px 0px 100px;
+    }
+
+    .home_content h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .get_in_touch_content h2,
+    .download_app_content h2 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 8px !important;
+    }
+
+    .get_in_touch_content p {
+        font-size: 14px;
+    }
+
+    .chat_sec {
+        padding: 100px 10px 50px;
+    }
+
+    .services_inner .chat_acc_dec_btns button {
+        font-size: 14px;
+    }
+
+    .services_inner .chat_request_box {
+        padding: 10px 10px;
+    }
+
+    .contracts_tabs .nav-tabs button {
+        padding: 10px 22px;
+    }
+
+    .dashboard_content.contracts_content {
+        padding: 28px 5px;
+    }
+
+    .chat_inner::-webkit-scrollbar,
+    .left_sidebar_links::-webkit-scrollbar,
+    .notification_inner::-webkit-scrollbar,
+    .services_inner.contracts_inner::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .contracts_inner .chat_user_name h5,
+    .contracts_inner .chat_user_name h3,
+    .contracts_inner .chat_user_name p,
+    .contracts_inner .chat_user_name span {
+        font-size: 14px;
+    }
+
+    .transaction_list li {
+        display: grid !important;
+    }
+
+    .transaction_credited a.download_invoice {
+        text-align: left !important;
+    }
+    .input_chats_icon{
+        padding: 12px 8px;
+    }
+}
+
+/* responsive css end */

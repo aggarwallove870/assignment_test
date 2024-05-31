@@ -1,0 +1,48 @@
+<!-- {% for all_cat_blogs in all_cat_blogs %}
+<div class="blog-entry d-flex blog-entry-search-item">
+    <div>
+        <span class="date">{{ all_cat_blogs.created_at }}</span>
+        <h2><a href="{% url 'show_blog' all_cat_blogs.id %}">{{ all_cat_blogs.title }}</a></h2>
+        <ul class="tags-list">
+            {% for tag in all_cat_blogs.tags.all %}
+                <li><a href="{% url 'all_blogs' %}?tag={{ tag.name }}">{{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>{{ all_cat_blogs.content }}</p>
+        <p>
+            {% if all_cat_blogs.content|length > 100 %}
+                {{ all_cat_blogs.content|slice:":100" }}
+                <span class="dots">...</span>
+                <span class="more" style="display: none; word-break: break-all;">{{ all_cat_blogs.content|slice:"100:" }}</span>
+                <p><a href="" class="btn btn-sm btn-outline-primary">Read More</a></p>
+            {% else %}
+                {{ all_cat_blogs.content }}
+            {% endif %}
+        </p>
+    </div>
+</div>
+{% endfor %} -->
+{% for blog_post in all_cat_blogs %}
+<div class="blog-entry d-flex blog-entry-search-item">
+    <div>
+        <span class="date">{{ blog_post.created_at }}</span>
+        <h2><a href="{% url 'show_blog' blog_post.id %}">{{ blog_post.title }}</a></h2>
+        <ul class="tags-list">
+            {% for tag in blog_post.tags.all %}
+                <li><a href="{% url 'all_blogs' %}?tag={{ tag.name }}">{{ tag.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>{{ blog_post.content }}</p>
+        <p>
+            {% if blog_post.content|length > 100 %}
+                {{ blog_post.content|slice:":100" }}
+                <span class="dots">...</span>
+                <span class="more" style="display: none; word-break: break-all;">{{ blog_post.content|slice:"100:" }}</span>
+                <p><a href="" class="btn btn-sm btn-outline-primary">Read More</a></p>
+            {% else %}
+                {{ blog_post.content }}
+            {% endif %}
+        </p>
+    </div>
+</div>
+{% endfor %}

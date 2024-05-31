@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    {% csrf_token %}
+        <section class="register_sec position-relative">
+        <div class="container">
+            <form class="register_form" id="real-data">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-10 m-auto">
+                        <div class="form_inner position-relative z-1">
+                            <div class="form_heading text-center mb-4">
+
+                                <h2>Register into your account</h2>
+                                <p>We are glad to see you with us! <span><img src="{% static 'Webapp/prodrive/images/hand.svg' %}"></span></p>
+                            </div>
+                           
+                            <div class="form_inputs">
+                              
+                                <div class="input-field form-floating mb-3">
+                                    <input type="name" class="form-control clearfield" id="floatingInput1" placeholder="text" required="">
+                                    <label for="floatingInput1">Name</label>
+                                </div>
+                                <div class="input-field form-floating mb-3">
+                                    <input type="email" class="form-control clearfield" id="floatingInput2" placeholder="" required="">
+                                    <label for="floatingInput2">Email</label>
+                                </div>
+                               
+                                  <div class="input-field form-floating mb-3 position-relative">
+                                    <input type="password" class="form-control clearfield" min="8" id="password" placeholder="" required="">
+                                    <label for="floatingInput4">Create Password</label>
+                                    <div class="eye-icon">
+                                        <i class="fa fa-eye-slash fa-white" id="eye" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="input-field form-floating mb-3 position-relative">
+                                    <input type="password" class="form-control clearfield"  minlength="8"  id="confirm_password" placeholder="" required="">
+                                    <label for="floatingInput5">Confirm Password</label>
+                                    <div class="eye-icon">
+                                        <i class="fa fa-eye-slash fa-white" id="eyes" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                             
+                                <div class="create_acc_btn mt-4 pt-1">
+                                    <button type="submit" id="submitted-data" class="border-0 w-100">
+                                        <span class="spinner-border spinner-border-sm" id="progressloader" role="status" aria-hidden="true"></span>
+                                        <span id="button-text">Create Account</span>
+                                    </button>
+                                </div>
+                            
+                                
+                                <div class="alert alert-success" role="alert" id="success-alert" style="display: none;"> 
+                                <div class="already_acc text-center  mt-4 pt-1">
+                                    <p class="mb-0">Already have an account? <a href="{% url 'login_page' %}">login</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <p id="notificationMessage"></p>
+                     {% comment %} <textarea placeholder="some text"></textarea> {% endcomment %}
+                    </div>  
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- registe sec end here -->
+
+
+{% endblock content %}
+
+
+
+{% block extra_js %}
+<script src="{% static 'js/register.js' %}"></script>
+
+<script>
+
+    $(document).ready(function(){
+      $("#progressloader").hide(); 
+  
+      $("#submitted-data").click(function(event){
+          event.preventDefault();
+        
+          $("#progressloader").show(); 
+          $("#button-text").text("Loading...");
+    
+          var user_name = $("#floatingInput1").val().trim();
+          var user_email = $("#floatingInput2").val().trim();
+          var user_password = $("#password").val().trim();
+          var user_password2 = $("#confirm_password").val().trim();
+          var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+          if (user_name === "" || user_email === "" || user_password === "" || user_password2 === "") {
+            showNotificationforregister("Please Fill all The Fields");
+            setTimeout(hideNotification, 3000);
+            $("#progressloader").hide();
+            $("#button-text").text("Create Account");
+            return;
+          }
+          if (!email_regex.test(user_email)) {
+              $("#floatingInput2").siblings("label")
+                  .text("Invalid email address *")
+                  .css({'color': '#f9ca47', 'font-size': '16px'});
+              setTimeout(function () {
+                  $("#floatingInput2").siblings("label")
+                      .text("Email")
+                      .css({'color': '', 'font-size': ''}); 
+              }, 3000);
+              $("#progressloader").hide();
+              $("#button-text").text("Create Account"); 
+              
+              return;
+        
+          }
+        
+          if (user_password !== user_password2) {
+              $("#confirm_password").siblings("label")
+                  .text("Passwords do not match *")
+                  .css({'color': '#f9ca47', 'font-size': '16px'});
+          
+              setTimeout(function () {
+                  $("#confirm_password").siblings("label")
+                      .text("Confirm Password")
+                      .css({'color': '', 'font-size': ''}); 
+              }, 3000);
+              $("#progressloader").hide();
+              $("#button-text").text("Create Account");
+             
+            
+              return;
+          }
+         
+          if (user_password.length < 6) {
+            $("#password").siblings("label")
+                .text("Password must be at least 6 characters *")
+                .css({'color': '#f9ca47', 'font-size': '16px'});
+            setTimeout(function () {
+                $("#password").siblings("label")
+                    .text("Password")
+                    .css({'color': '', 'font-size': ''}); 
+            }, 3000);
+            $("#progressloader").hide();
+            $("#button-text").text("Create Account"); 
+            return;
+        }
+        var formData = {
+            name: user_name,
+            email: user_email,
+            password: user_password,
+            csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+        };
+        $.ajax({
+            url: "{% url 'register' %}", 
+            type: "POST",
+            data: formData,
+            success: function(response) {
+                $("#progressloader").hide();
+                $("#button-text").show();
+                if (response.success) {
+                $("#button-text").text("Succesfully Created");
+                window.location.href = "{% url 'login_page' %}";
+                } else {
+                    showNotificationforregister(response.error);
+                    setTimeout(hideNotification, 3000);
+                    $("#progressloader").hide();
+                    $("#button-text").text("Create Account");
+                }
+            },
+            error: function(xhr, status, error) {
+                $("#progressloader").hide();
+                $("#button-text").show("Create Account");
+                showNotificationforregister(error);
+                    setTimeout(hideNotification, 3000);
+                console.log('AJAX error: ' + error);
+            }
+        });
+  
+    });
+  
+    });
+  </script>
+
+
+
+<script>
+
+    function showNotificationforregister(message) {
+      $("#notificationMessage").text(message);
+      $(".notification")
+        .fadeIn()
+        .css({ right: 0 })
+        .animate({ right: 30 }, 1000, function() {
+        });
+    }
+    
+    function hideNotification() {
+      $(".notification").fadeOut("slow");
+    }
+    
+    </script>
+
+{% endblock extra_js %}

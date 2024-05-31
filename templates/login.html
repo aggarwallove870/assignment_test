@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="register_sec position-relative">
+    <div class="container">
+        <form class="register_form">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 col-md-10 m-auto">
+                    <div class="form_inner position-relative z-1">
+                    <div class="form_heading text-center mb-4">
+                        <h2>Login into your account</h2>
+                        <p>We are glad to see you with us! <span><img src="{% static 'Webapp/prodrive/images/hand.svg' %}"></span></p>
+                    </div>
+                    <div class="form_inputs">
+                        <div class="input-field form-floating mb-3">
+                            <input type="email" class="form-control loginclearfield" id="login-email" placeholder="" required="">
+                            <label for="floatingInput2">Email</label>
+                        </div>
+                        <div class="input-field form-floating mb-3 position-relative">
+                            <input type="password" class="form-control loginclearfield" id="login-password" placeholder="" required="">
+                            <label for="floatingInput4">Password</label>
+                            <div class="eye_icon">
+                                <i class="fa fa-eye-slash fa-white" id="login-eyes" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                       
+                        <div class="create_acc_btn mt-4 pt-1">
+                            <button type="submit" id = "login-submitted-data" class="border-0 w-100">
+                            <span class="spinner-border spinner-border-sm" id="login-progressloader" role="status" aria-hidden="true"></span>
+                                <span id="login-button-text">Login</span></button>
+                        </div>
+                        <div class="already_acc text-center  mt-4 pt-1">
+                            <p class="mb-0">Don’t have an account? <a href="{% url 'register' %}">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notification">
+                <p id="notificationmessageforlogin"></p>
+             {% comment %} <textarea placeholder="some text"></textarea> {% endcomment %}
+            </div>  
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+  
+    $('#login-eyes').click(function(){
+        if($(this).hasClass('fa-eye-slash')){
+            $(this).removeClass('fa-eye-slash');
+            $(this).addClass('fa-eye');
+            $('#login-password').attr('type','text');
+        } else {
+            $(this).removeClass('fa-eye');
+            $(this).addClass('fa-eye-slash');  
+            $('#login-password').attr('type','password');
+        }
+    });
+  
+  
+    $("#login-progressloader").hide(); 
+  
+    $("#login-submitted-data").click(function(event){
+        event.preventDefault();
+      
+        $("#login-progressloader").show(); 
+        $("#login-button-text").text("Loading...");
+  
+        var user_email = $("#login-email").val().trim();
+        var user_password = $("#login-password").val().trim();
+        var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!email_regex.test(user_email)) {
+            $("#login-email").siblings("label")
+                .text("Invalid email address *")
+                .css({'color': '#f9ca47', 'font-size': '16px'});
+            setTimeout(function () {
+                $("#login-email").siblings("label")
+                    .text("Email")
+                    .css({'color': '', 'font-size': ''}); 
+            }, 3000);
+            $("#login-progressloader").hide();
+            $("#login-button-text").text("Login"); 
+            return;
+        }
+  
+        if (user_email === "" || user_password === "") {
+            showNotificationforlogin("Please Fill All The Fields");
+            setTimeout(hideNotification, 3000);
+            $("#login-progressloader").hide();
+            $("#login-button-text").text("Login");
+            return;
+        }
+  
+         performLogin(user_email, user_password);
+    });
+});
+</script>  
+
+<script>
+       function performLogin(email, password) {
+        $.ajax({
+            url: "{% url 'login_page' %}",
+            type: "POST",
+            data: {
+                email: email,
+                password: password,
+                csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+            },
+            success: function(response) {
+                console.log(response,"====response")
+                if (response.success) {
+                    console.log("sucess")
+                    window.location.href = response.redirect_url;
+                } else {
+                    console.log("eroor")
+                    showNotificationforlogin(response.message);
+                    setTimeout(hideNotification, 3000);
+                    $("#login-progressloader").hide();
+                    $("#login-button-text").text("Login");
+                }
+            },
+            error: function() {
+                showNotificationforlogin("An error occurred. Please try again.");
+                setTimeout(hideNotification, 3000);
+                $("#login-progressloader").hide();
+                $("#login-button-text").text("Login");
+            }
+        });
+    }
+</script>
+
+<script>
+      function showNotificationforlogin(message) {
+      $("#notificationmessageforlogin").text(message);
+      $(".notification")
+          .fadeIn()
+          .css({ right: 0 })
+          .animate({ right: 30 }, 1000, function() {
+      });
+  }
+
+  function hideNotification() {
+      $(".notification").fadeOut("slow");
+  }
+
+
+</script>
+
+{% endblock extra_js %}
