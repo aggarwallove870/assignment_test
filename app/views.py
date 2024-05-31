@@ -2,13 +2,21 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.mail import send_mail, EmailMessage
 from app.models import *
+from dotenv import load_dotenv
+import os
+
 from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.template.loader import render_to_string
 from django.shortcuts import get_object_or_404
-
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 # Create your views here.
 from django.contrib.auth.decorators import login_required
+
+# Load environment variables from .env file
+load_dotenv()
 
 @login_required
 def home_page(request):
@@ -24,8 +32,6 @@ def login_page(request):
         try:
             email = request.POST.get('email')
             password = request.POST.get('password')
-            print(email, password)
-            
             user = authenticate(request, username=email, password=password)
             
             if user is not None:
@@ -125,16 +131,31 @@ def share_blog_post(request, pk):
 
     if request.method == 'POST':
         email = request.POST.get('email')
+        print(email)
         message = request.POST.get('message')
         subject = f"{request.user} shared a blog post with you: {blog_post.title}"
       
-        sender = 'wo@key2mail.ca'
+        sender =  os.environ.get('EMAIL_HOST_USER')
+        smtp_server = os.environ.get('EMAIL_HOST')
+        port = int(os.getenv('EMAIL_PORT', 587))
+        sender_email = os.environ.get('EMAIL_HOST_USER')
+        password =  os.getenv('EMAIL_HOST_PASSWORD')
+      
+        msg = MIMEMultipart()
+        msg['From'] = sender
+        msg['To'] = email
+        msg['Subject'] = subject
+        msg.attach(MIMEText(message, 'plain'))
 
+# Send the email
         try:
-            send_mail(subject, message, sender, [email])
-            return JsonResponse({'success': True})
+            with smtplib.SMTP_SSL(smtp_server, port) as server:
+                server.login(sender_email, password)
+                server.sendmail(sender_email, email, msg.as_string())
+                return JsonResponse({'success': True})
+            print("Email sent successfully.")
         except Exception as e:
+            print(f"Error: {e}")
+        
             return JsonResponse({'success': False, 'error_message': str(e)})
-    else:
-        return JsonResponse({'success': False, 'error_message': 'Invalid request'})
-    
+       
