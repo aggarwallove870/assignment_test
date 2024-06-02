@@ -71,8 +71,10 @@ def all_blogs(request):
 
     if tag_name:
         filtered_blogs = BlogPost.objects.filter(tags__name__iexact=tag_name)
+        print(filtered_blogs,"===filterd_blogs==")
     else:
         filtered_blogs = BlogPost.objects.all()
+        print("===filterd_blogs")
 
     paginator = Paginator(filtered_blogs, 5)
     
@@ -82,9 +84,22 @@ def all_blogs(request):
         all_cat_blogs = paginator.page(1)
     except EmptyPage:
         all_cat_blogs = paginator.page(paginator.num_pages)
+    
+    if request.method == "GET" and "tag" in request.GET:
 
-    if request.method=="GET" and "tag" in request.GET:
-        all_data = list(all_cat_blogs.object_list.values())
+        all_data = []
+        for blog in all_cat_blogs.object_list:
+            tags = list(blog.tags.values_list('name', flat=True))
+            print(tags,"==tags==")
+            blog_data = {
+                "id": blog.id,
+                "title": blog.title,
+                "content": blog.content,
+                "tags": tags,
+                "created_at": blog.created_at,
+            }
+            all_data.append(blog_data)
+        print(all_data, "===all_data===")
         data = {
             "filtered_blogs": all_data,
             "has_other_pages": all_cat_blogs.has_other_pages(),
@@ -158,4 +173,19 @@ def share_blog_post(request, pk):
             print(f"Error: {e}")
         
             return JsonResponse({'success': False, 'error_message': str(e)})
-       
+
+
+def like_comment(request):
+    if request.method == 'POST':
+        comment_id = request.POST.get('comment_id')
+        comment = get_object_or_404(Comment, id=comment_id)
+        user = request.user
+        liked = Like.objects.filter(user=user, comment=comment).exists()
+        if not liked:
+            like = Like.objects.create(user=user, comment=comment)
+            return JsonResponse({'status': 'liked'})
+        else:
+            Like.objects.filter(user=user, comment=comment).delete()
+            return JsonResponse({'status': 'unliked'})
+    else:
+        return JsonResponse({'success': False, 'error_message': 'Invalid request method'})

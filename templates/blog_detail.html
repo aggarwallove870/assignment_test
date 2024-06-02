@@ -51,6 +51,8 @@
                     <div class="comment">
                         <p><strong>{{ comment.author.name }}</strong> says:</p>
                         <p>{{ comment.text }}</p>
+                        <button class="like-btn" data-commentid="{{ comment.id }}">Like</button>
+                        <span class="like-count">Likes: {{ comment.likes.count }}</span>
                     </div>
                 {% endfor %}
             {% else %}
@@ -141,6 +143,42 @@
     });
 </script>
 
+<script>
+    $(document).ready(function(){
+        $('.like-btn').click(function(){
+            var commentId = $(this).data('commentid');
+            var csrfToken = '{{ csrf_token }}';
+            var actionUrl = '{% url "like_comment" %}';
+            var likeBtn = $(this);
+
+            $.ajax({
+                type: 'POST',
+                url: actionUrl,
+                data: {
+                    'comment_id': commentId,
+                    'csrfmiddlewaretoken': csrfToken
+                },
+                success: function(response){
+                    if (response.status === 'liked') {
+                        likeBtn.addClass('liked');
+                        likeBtn.text('Unlike');
+                        // Update like count
+                        var likeCount = likeBtn.closest('.comment').find('.like-count');
+                        var currentCount = parseInt(likeCount.text().split(':')[1].trim());
+                        likeCount.text('Likes: ' + (currentCount + 1));
+                    } else if (response.status === 'unliked') {
+                        likeBtn.removeClass('liked');
+                        likeBtn.text('Like');
+                        // Update like count
+                        var likeCount = likeBtn.closest('.comment').find('.like-count');
+                        var currentCount = parseInt(likeCount.text().split(':')[1].trim());
+                        likeCount.text('Likes: ' + (currentCount - 1));
+                    }
+                }
+            });
+        });
+    });
+</script>
 
 
 

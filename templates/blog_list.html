@@ -32,7 +32,6 @@
                 <li><a href="{% url 'all_blogs' %}?tag={{ tag.name }}">{{ tag.name }}</a></li>
             {% endfor %}
         </ul>
-        <p>{{ blog_post.content }}</p>
         <p>
             {% if blog_post.content|length > 100 %}
                 {{ blog_post.content|slice:":100" }}

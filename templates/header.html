@@ -9,7 +9,7 @@
             <div class="site-navigation">
                 <div class="row g-0 align-items-center">
                     <div class="col-2">
-                        <a href="index.html" class="logo m-0 float-start">Blogy<span class="text-primary">.</span></a>
+                        <a href="{% url 'home' %}" class="logo m-0 float-start">Blogy<span class="text-primary">.</span></a>
                     </div>
                     <div class="col-8 text-center">
                         <form action="#" class="search-form d-inline-block d-lg-none">
@@ -22,13 +22,13 @@
                                 {% if request.user.is_authenticated %}
                                     <li class="active"><a href="{% url 'home' %}">Home</a></li>
                                 {% else %}
-                                    <li><a>Home</a></li>
+                                    <li><a  onclick="showModal()" >Home</a></li>
                                 {% endif %}
                                 {% if request.user.is_authenticated %}
                                     <li><a href="{% url 'all_blogs' %}">All Blogs</a></li>
                                 {% else %}
                                 
-                                    <li><a>All Blogs</a></li>
+                                    <li><a onclick="showModal()">All Blogs</a></li>
                                 {% endif %}
                                 {% if request.path == "/register/" %}
                                 <li class="active"><a href="{% url 'login_page' %}">Login</a></li>
@@ -53,11 +53,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
             <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
-                <img src="/static/Webapp/prodrive/images/cross-icon.svg" class="img-fluid">
+                <img src="/static/images/cross-icon.svg" class="img-fluid">
               </button>
         <div class="modal-body text-center">
           <div class="site_logo mb-3">
-            <img src="/static/Webapp/prodrive/images/site-logo.svg" class="img-fluid" class="img-fluid">
+            <!-- <img src="/static/Webapp/prodrive/images/site-logo.svg" class="img-fluid" class="img-fluid"> -->
+    
           </div>
           <div class="please_login_text">
             <p class="mb-0">Please <a href="{% url 'login_page' %}">Login/</a><a href="{% url 'register' %}">Register</a> into your account.</p>
